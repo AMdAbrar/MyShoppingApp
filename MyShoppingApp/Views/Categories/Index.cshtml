@@ -1,0 +1,25 @@
+﻿@model IEnumerable<MyShoppingApp.Models.Categories>//In controller if we use list like collection type then we need to declare like this.
+<a asp-controller="Demo" asp-action="Index">go to Demo</a>
+<table>
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>Name</th>
+			<th>Description</th>
+
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			@foreach( var item in Model){
+				<td>@item.Id</td>
+				<td>@item.Name</td>
+				<td>@item.Description</td>
+
+
+			}
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+

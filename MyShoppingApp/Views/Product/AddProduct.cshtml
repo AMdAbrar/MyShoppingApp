@@ -1,0 +1,27 @@
+﻿@model MyShoppingApp.Models.Product
+@* <a asp-controller="product" asp-action="Index">back to Index</a> *@
+<h5>Add products</h5> 
+	<form method="post">
+	<div class="form-group">
+	<label>Product Name</label>
+	<input asp-for="Name" type="text" class="form-control" />
+	</div>
+			<div class="form-group">
+				<label>Product Desc</label>
+			<input type="text" asp-for="Description" class="form-control" />
+			</div>
+			<div class="form-group">
+				<label>Product Category</label>
+			<input type="text" asp-for="Categories" class="form-control" />
+			</div>
+			<input type="submit" value="save" class="btn btn-primary"/>
+			<input type="button" value="Reset" class="btn btn-primary" />
+
+	</form>
+	<hr />
+	@{
+		if(ViewBag.message!=null){
+		<h1 class="alert alert-success"> @ViewBag.message</h1>}
+	}
+	
+
